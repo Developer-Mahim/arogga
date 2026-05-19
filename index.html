@@ -1148,7 +1148,7 @@
         }
 
         const qtyNumOpts = [{value:'', text:'Quantity'}, ...[...Array(10)].map((_,i)=>({value:String(i+1), text:String(i+1)})), {value:'Custom', text:'Custom...'}];
-        const qtyUnitOpts = [{value:'', text:'Things'}, ...['Strip', 'Bottle', 'Pack', 'Combo', 'Box', 'Piece', 'Injection', 'Ample', 'Unit'].map(u=>({value:u, text:u}))];
+        const qtyUnitOpts = [{value:'', text:'Things'}, ...['Strip', 'Bottle', 'Pack', 'Combo', 'Box', 'Piece', 'Injection', 'Jar', 'Tin', 'Ampoule', 'Unit'].map(u=>({value:u, text:u}))];
         const statusOpts = [{value:'', text:'Status'}, {value:'Damaged', text:'Damaged'}, {value:'Lost', text:'Lost'}];
 
 
@@ -1755,7 +1755,7 @@
                 const url = URL.createObjectURL(blob);
                 const downloadLink = document.createElement("a");
                 downloadLink.href = url;
-                downloadLink.download = `${ldActiveCourier}_Lost_Damaged_${fileDate}.docx`;
+                downloadLink.download = `${ldActiveCourier}_Lost_&_Damaged_${fileDate}.docx`;
                 document.body.appendChild(downloadLink);
                 downloadLink.click();
                 document.body.removeChild(downloadLink);
