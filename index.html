@@ -1238,7 +1238,7 @@
         }
 
         const qtyNumOpts = [{value:'', text:'Quantity'}, ...[...Array(10)].map((_,i)=>({value:String(i+1), text:String(i+1)})), {value:'Custom', text:'Custom...'}];
-        const qtyUnitOpts = [{value:'', text:'Things'}, ...['Strip', 'Bottle', 'Pack', 'Tube', 'Combo', 'Box', 'Piece', 'Injection', 'Jar', 'Tin', 'Ampoule', 'Unit'].map(u=>({value:u, text:u}))];
+        const qtyUnitOpts = [{value:'', text:'Things'}, ...['Strip', 'Bottle', 'Pack', 'Tube', 'Combo', 'Box', 'Piece', 'Injection', 'Jar','Bar','Stick', 'Tin', 'Ampoule', 'Unit'].map(u=>({value:u, text:u}))];
         const statusOpts = [{value:'', text:'Status'}, {value:'Damaged', text:'Damaged'}, {value:'Lost', text:'Lost'}];
 
 
@@ -1376,7 +1376,9 @@
                 case 'Steadfast': return 'e.g. SFR260513STB9DB73CBD';
                 case 'Pathao': return 'e.g. DA120526EBY9BZ';
                 case 'Redx': return 'e.g. 26A513WE1CR1BJ';
-                default: return 'e.g. 050526-934340-A4-G4';
+                case 'Carrybee': return 'e.g. F0705ANYGP3';
+                case 'Paperfly': return 'e.g. 050526-934340-A4-G4';
+                default: return 'e.g. XXXXXXXXXXXX';
             }
         }
         
