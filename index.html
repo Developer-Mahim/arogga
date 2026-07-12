@@ -1822,7 +1822,7 @@
             overlayEl.classList.remove('hidden');
             overlayEl.classList.add('flex');
             barEl.style.width = '2%';
-            textEl.innerText = 'Preparing secure upload...';
+            textEl.innerText = 'Preparing for upload...';
 
             inputEl.disabled = true;
             if (uploadBtn) uploadBtn.disabled = true;
@@ -1860,7 +1860,7 @@
 
                     const percent = Math.round((offset / file.size) * 100);
                     barEl.style.width = `${percent}%`;
-                    textEl.innerText = `Uploading securely... ${percent}%`;
+                    textEl.innerText = `Uploading... ${percent}%`;
 
                     const chunkResponse = await fetch(GAS_WEB_APP_URL, {
                         method: 'POST',
