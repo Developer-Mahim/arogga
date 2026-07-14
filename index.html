@@ -1091,13 +1091,13 @@
                         newScan.isValid = false; // Error if there are multiple "|"
                     }
                 } else {
-                    // Priority 2: No '|' found, check if 2nd character is 'A' (e.g. RA, DA)
-                    if (rawText.length >= 2 && rawText[1].toUpperCase() === 'A') {
+                    // Priority 2: No '|' found, check if the first two characters are letters (e.g. RA, DA, AB, etc.)
+                    if (/^[a-zA-Z]{2}/.test(rawText)) {
                         newScan.formatted = rawText;
                         newScan.isValid = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z0-9]+$/.test(rawText);
                     } else {
                         newScan.formatted = rawText;
-                        newScan.isValid = false; // Error if missing '|' and 2nd char is not 'A'
+                        newScan.isValid = false; // Error if missing '|' and first 2 chars are not letters
                     }
                 }
             } else if (scanCurrentTool === 'carrybee') {
